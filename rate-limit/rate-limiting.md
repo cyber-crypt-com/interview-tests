@@ -8,10 +8,11 @@ GET /random
 
 which will by default return 32 bytes of randomness.
 
-In order to use the API, the requester must supply a `client_id` to the endpoint in a header:
+In order to use the API, the client of the API must be properly authenticated. For this you should use HTTP Basic Authentication
+as in
 
-``` 
-X-Client-ID: <client_id>
+```
+Authorization: Basic <string>
 ```
 
 Additionally the Client can request a different amount of bytes using the `len` query parameter, for instance the following 
@@ -48,7 +49,7 @@ X-Rate-Limit: <amount left>
 
 1. Extend the API with an Admin endpoint that can reset and change the rate limit for a client
 2. Allowing the rate limit to differ between different clients. This could be done through configuration.
-3. Authenticate the Client before serving the request.
+3. Implement a better authentication / authorization mechanism than Basic 
 4. Add a signature to the response JSON object `sig` that is signed using a public / private key pair from the server.
 
 # Your Assignment
