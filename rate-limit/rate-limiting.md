@@ -72,6 +72,12 @@ In your response, please provide:
     - How to build, run, and test your API
     - How you are sure the API works as intended
 
+## Hints
+- Don't forget about testing
+- Think about what happens during the rate reset or with parallel requests
+- Are there any language constructs or collections that are suitable to keep state?
+- Are there any design patterns or paradigms that can help you?
+
 If there is anything that is unclear - that is intentional. Please derive a suitable solution based on your knowledge and the information you have, but be sure to add 
 a suitable explanation in your solution to how you handled the uncertainty.
 
